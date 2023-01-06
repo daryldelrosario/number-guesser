@@ -9,7 +9,7 @@ function generateTarget() {
 }
 
 // Comparing guesses between human and computer
-const compareGuess = (human, computer, target) => {
+const compareGuesses = (human, computer, target) => {
     const humanGuess = Math.abs(human - target);
     const computerGuess = Math.abs(computer - target);
     
