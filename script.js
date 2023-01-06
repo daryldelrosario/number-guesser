@@ -8,17 +8,21 @@ function generateTarget() {
     return Math.floor(Math.random() * 10);
 }
 
+// Extension task: Refactor compareGuesses() to use getAbsoluteDistance()
+function getAbsoluteDistance(firstNum, secondNum) {
+    return Math.abs(firstNum - secondNum);
+}
+
 // Comparing guesses between human and computer
 const compareGuesses = (human, computer, target) => {
-    const humanGuess = Math.abs(human - target);
-    const computerGuess = Math.abs(computer - target);
-    
-    if(humanGuess < computerGuess) {
-        return true;
-    } else if(humanGuess > computerGuess) {
-        return false;
+    // Extension task: validate humanGuess is between 0 - 9
+    if(human >= 0 && human <= 9) {
+        const humanGuess = getAbsoluteDistance(human, target);
+        const computerGuess = getAbsoluteDistance(computer, target);
+
+        return(humanGuess <= computerGuess);
     } else {
-        return true;
+        alert("The number is out of range. Guess between 0 - 9");
     }
 }
 
