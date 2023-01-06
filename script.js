@@ -28,6 +28,7 @@ const compareGuesses = (human, computer, target) => {
         }
     }
 
+    // Display human guess in input card
     value = human;
     input.value = value;
 
