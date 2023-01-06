@@ -10,14 +10,19 @@ function generateTarget() {
 
 // Comparing guesses between human and computer
 const compareGuess = (human, computer, target) => {
-    const humanScore = Math.abs(human - target);
-    const computerScore = Math.abs(computer - target);
+    const humanGuess = Math.abs(human - target);
+    const computerGuess = Math.abs(computer - target);
     
-    if(humanScore < computerScore) {
+    if(humanGuess < computerGuess) {
         return true;
-    } else if(humanScore > computerScore) {
+    } else if(humanGuess > computerGuess) {
         return false;
     } else {
         return true;
     }
+}
+
+// Updates score of the winner
+const updateScore = winner => {
+
 }
