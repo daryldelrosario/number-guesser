@@ -24,5 +24,5 @@ const compareGuess = (human, computer, target) => {
 
 // Updates score of the winner
 const updateScore = winner => {
-
+    winner === "human" ? humanScore += 1 : computerScore += 1;
 }
