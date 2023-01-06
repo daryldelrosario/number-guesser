@@ -16,14 +16,24 @@ function getAbsoluteDistance(firstNum, secondNum) {
 // Comparing guesses between human and computer
 const compareGuesses = (human, computer, target) => {
     // Extension task: validate humanGuess is between 0 - 9
-    if(human >= 0 && human <= 9) {
-        const humanGuess = getAbsoluteDistance(human, target);
-        const computerGuess = getAbsoluteDistance(computer, target);
+    let input = document.querySelector("input[type='number']");
+    let value;
 
-        return(humanGuess <= computerGuess);
-    } else {
-        alert("The number is out of range. Guess between 0 - 9");
+    while(human < 0 || human > 9 || human === null || human === "" || isNaN(human)) {
+        human = window.prompt("Guess must be a value between 0 - 9. Please enter your guess here:");
+        value = human;
+
+        if (human < 0 || human > 9 || human === null || human === "" || isNaN(human)) {
+            alert("Invalid Guess! Please read instructions and try again!");
+        }
     }
+
+    value = human;
+    input.value = value;
+
+    const humanGuess = getAbsoluteDistance(human, target);
+    const computerGuess = getAbsoluteDistance(computer, target);
+    return(humanGuess <= computerGuess);
 }
 
 // Updates score of the winner
