@@ -1,5 +1,5 @@
 # Number Guesser
-JavaScript funtions to power a small guessing game
+JavaScript functions to power a small guessing game
 
 ## <a href="https://daryldelrosario.github.io/number-guesser">Live Demo</a>
 <kbd><a href="https://daryldelrosario.github.io/number-guesser"><img src="number-guesser-ld.gif" alt="live demo for number guesser gif"></a></kbd>
