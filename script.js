@@ -26,3 +26,6 @@ const compareGuess = (human, computer, target) => {
 const updateScore = winner => {
     winner === "human" ? humanScore += 1 : computerScore += 1;
 }
+
+// Update round number after each round
+const advanceRound = () => currentRoundNumber += 1;
